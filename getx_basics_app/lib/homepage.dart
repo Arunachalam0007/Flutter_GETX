@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Get.to(DashboardPage());
+                Get.to(() => DashboardPage());
               },
               child: const Text(
                 'Go To DashBoard Page',

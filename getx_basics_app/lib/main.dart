@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.downToUp,
       getPages: [
         GetPage(name: '/HomePage', page: () => const HomePage()),
-        GetPage(name: '/DashboardPage', page: () => const DashboardPage()),
+        GetPage(name: '/DashboardPage', page: () => DashboardPage()),
       ],
       home: Scaffold(
         appBar: AppBar(
