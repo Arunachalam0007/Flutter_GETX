@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_basics_app/dashboardpage.dart';
 
+import 'getxcontroller_uniqueid/getxcontroller_unique_id.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -16,6 +18,11 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(HomeControllerUniqueIdScreen());
+                },
+                child: Text('Go to GETX Uniquie ID Controller')),
             ElevatedButton(
               onPressed: () {
                 Get.to(() => DashboardPage());
