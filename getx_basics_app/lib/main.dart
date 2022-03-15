@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_basics_app/bindings_concepts/screen_controller_binding.dart';
 import 'package:getx_basics_app/dashboardpage.dart';
 import 'package:getx_basics_app/homepage.dart';
 
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
       title: 'Get Material App',
+      initialBinding: ScreenControllerBinding(),
       defaultTransition: Transition.downToUp,
       getPages: [
         GetPage(name: '/HomePage', page: () => const HomePage()),

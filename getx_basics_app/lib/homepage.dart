@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_basics_app/dashboardpage.dart';
 
+import 'bindings_concepts/view_screens.dart';
 import 'getxcontroller_uniqueid/getxcontroller_unique_id.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,6 +19,12 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            ElevatedButton(
+              onPressed: () {
+                Get.to(ViewScreens());
+              },
+              child: Text('GO TO View Screens'),
+            ),
             ElevatedButton(
                 onPressed: () {
                   Get.to(HomeControllerUniqueIdScreen());
