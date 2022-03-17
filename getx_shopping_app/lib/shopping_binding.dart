@@ -2,6 +2,7 @@ import 'package:get/instance_manager.dart';
 
 import 'controller/shopping_cart_controller.dart';
 import 'controller/shopping_controller.dart';
+import 'controller/shopx/shopx_product_controller.dart';
 
 class ShoppingBindings extends Bindings {
   @override
@@ -10,5 +11,6 @@ class ShoppingBindings extends Bindings {
     Get.put(ShoppingController());
 
     Get.put(ShoppingCartController());
+    Get.put(ShopXProductController());
   }
 }

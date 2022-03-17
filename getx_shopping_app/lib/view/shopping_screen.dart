@@ -40,7 +40,7 @@ class ShoppingScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return ShoppingListCardWidget(
                         shpController: shoppingControl,
-                        shpCartController: shoppingCartController,
+                        //   shpCartController: shoppingCartController,
                         index: index,
                       );
                     });
@@ -61,11 +61,11 @@ class ShoppingScreen extends StatelessWidget {
 
 class ShoppingListCardWidget extends StatelessWidget {
   final ShoppingController shpController;
-  final ShoppingCartController shpCartController;
+  // final ShoppingCartController shpCartController;
   final int index;
   const ShoppingListCardWidget({
     required this.shpController,
-    required this.shpCartController,
+    // required this.shpCartController,
     required this.index,
     Key? key,
   }) : super(key: key);
@@ -104,7 +104,7 @@ class ShoppingListCardWidget extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        shpCartController
+                        Get.find<ShoppingCartController>()
                             .addToCart(shpController.products[index]);
                       },
                       child: const Icon(Icons.add_shopping_cart),
